@@ -6,7 +6,7 @@ To find all matches longer than 300bp between sequences in files 1.fa and 2.fa a
 
 2. Making histogram of matches lengths
 
-To do so we use the C programm in file MakeHistFromMummer.c. It takes as an input Res.mumm and generates the histogram in file ResHist.mumm.
+To do so we use the C programm in file MakeHistFromMummer.c. It takes as an input Res.mumm and generates the histogram in file ResHist.mumm - two columns: match length and corresponding number of matches.
 
 
 3. Calculation the prefactor of the resulting power-law.
