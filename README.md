@@ -5,6 +5,10 @@ Here we describe in detail
 To find all matches longer than 300bp between sequences in files 1.fa and 2.fa and save it in the file Res.mumm we use the following command: mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm.
 
 2. Making histogram of matches lengths
+
+To do so we use the C programm in file MakeHistFromMummer.c. It takes as an input Res.mumm and generates the histogram in file ResHist.mumm.
+
+
 3. Calculation the prefactor of the resulting power-law.
 4. Calculation of the GO and SEED terms enrichment.
 
