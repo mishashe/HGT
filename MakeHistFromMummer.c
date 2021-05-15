@@ -1,4 +1,4 @@
-void MakeHistFromMumm()
+int main MakeHistFromMumm()
 {
 	string line,foo;
 	long long int L;
@@ -24,5 +24,6 @@ void MakeHistFromMumm()
 	}
 	MummerFile.close();
 	OutFile.close();
+	return(0);
 }
 
