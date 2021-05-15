@@ -1,6 +1,6 @@
 # HGT
-Here we describe in detail 
-1. Calculation of exact matches between genomic sequences:
+Here we describe in detail analysis of exact matches between genomic sequences.
+1. Calculation of all exact matches between two genomic sequences:
 
 To find all matches longer than 300bp between sequences in files 1.fa and 2.fa and save it in the file Res.mumm we use the following command: mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm.
 
