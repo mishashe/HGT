@@ -10,6 +10,9 @@ To do so we use the C programm in file MakeHistFromMummer.c. It takes as an inpu
 
 
 3. Calculation the prefactor of the resulting power-law.
+
+To calculate the prefactor from the match length histogram in ResHist.mumm we use the Matlab script that can be found in file CalculatePrefactor.m. It takes as an input the file with the histogram file, minimal match length (rmin=300bp in our case) and total lengths of sequences 1.fa (L1) and 2.fa (L2).
+
 4. Calculation of the GO and SEED terms enrichment.
 
 
