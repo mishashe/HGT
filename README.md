@@ -32,3 +32,5 @@ GO terms search has been done using:
 To calculate the enrichment of GO/SEED terms we use the R script in file Enrichment.R. This script takes as an input a file containing the DNA sequence of the matches (to get their total length) and the number of SEED/GO hits from another file. It outputs the table of GO/SEED terms with their corresponding enrichment and significance level, based on the Fisher exact test.
 
 6. Mathematica notebook IllustrationBox1.nb (see pdf in IllustrationBox1.pdf) describes how Box 1 is generated.
+
+7. Using the text mining engine of Google we annotated some of the genera as predominately Marine,Gut and Soil. This was done googling marine/gut/soil bacteria and inspecting the html source of the resulting webpage.
