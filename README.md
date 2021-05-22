@@ -33,4 +33,4 @@ To calculate the enrichment of GO/SEED terms we use the R script in file Enrichm
 
 6. Mathematica notebook IllustrationBox1.nb (see pdf in IllustrationBox1.pdf) describes how Box 1 is generated.
 
-7. Using the text mining engine of Google we annotated some of the genera as predominately Marine,Gut and Soil. This was done googling marine/gut/soil bacteria and inspecting the html source of the resulting webpage.
+7. Using the text mining engine of Google we annotated some of the genera as predominately Marine,Gut and Soil. This was done googling marine/gut/soil bacteria and inspecting the html source of the resulting webpage. One can see the resulting lists in the supplementary material of the article.
