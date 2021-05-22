@@ -30,3 +30,5 @@ GO terms search has been done using:
   
 5. Calculation of the GO and SEED terms enrichment. 
 To calculate the enrichment of GO/SEED terms we use the R script in file Enrichment.R. This script takes as an input a file containing the DNA sequence of the matches (to get their total length) and the number of SEED/GO hits from another file. It outputs the table of GO/SEED terms with their corresponding enrichment and significance level, based on the Fisher exact test.
+
+6. Mathematica notebook 
