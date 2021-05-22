@@ -34,3 +34,7 @@ To calculate the enrichment of GO/SEED terms we use the R script in file Enrichm
 6. Mathematica notebook IllustrationBox1.nb (see pdf in IllustrationBox1.pdf) describes how Box 1 is generated.
 
 7. Using the text mining engine of Google we annotated some of the genera as predominately Marine,Gut and Soil. This was done googling marine/gut/soil bacteria and inspecting the html source of the resulting webpage. One can see the resulting lists in the supplementary material of the article.
+
+8. To obtain the blast hits to 12 specific databases (Acquired  antibiotic resistant genes (ResFinder database), Antibacterial Biocide and Metal Resistance Genes Database (BacMet database), Integrative and conjugative elements (ICEberg database), Virulence factors(VFDB database), Essential genes (DEG database), Toxin-Antitoxin systems (TADB database), Peptidases (MEROPS database), Bacterial Exotoxins for Human (DBETH database), Transmembrane proteins (PDBTM database), Restriction Enzymes (REBASE database), Bacterial small regulatory RNA genes (BSRD database), the Transporter Classification Database (TCDB) and Enzyme classification database (Brenda) we use the command 
+blastx -query seq.fa -max_hsps 1 -db database.fsa > seq.blast.temp -evalue 1e-50 -outfmt "6 sseqid,sseqid"
+with the seq.fa input file of matches and database.fsa database file. The output hits are stored in seq.blast.temp file.
