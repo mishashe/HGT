@@ -5,13 +5,13 @@ Here we describe the analysis of exact matches between genomic sequences publish
 To find all matches longer than 300bp between sequences in files 1.fa and 2.fa and save it in the file Res.mumm we use the following command: 
 mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm.
   
-2. Making histogram of matches lengths 
-To do so we use the C programm named MakeHistFromMummer.c. It takes as an input Res.mumm and generates the histogram, that we output to the file named ResHist.mumm.
+2. Making frequency table of matches lengths 
+To do so we use the C programm named MakeHistFromMummer.c. It takes as an input Res.mumm and generates the frequency table, that we output to the file named ResHist.mumm.
 The output file has two columns: column 1 gives the length of the match, column 2 the corresponding number of matches found for each length.
     
     
 3. Calculation the prefactor of the resulting power-law. 
-To calculate the prefactor from the match length histogram in ResHist.mumm we use the Matlab script that can be found in file CalculatePrefactor.m. It takes as an input the file with the histogram file, minimal match length (rmin=300bp in our case) and total lengths of sequences 1.fa (L1) and 2.fa (L2).
+To calculate the prefactor from the match length frequency table in ResHist.mumm we use the Matlab script that can be found in file CalculatePrefactor.m. It takes as an input the file with the frequency table file, minimal match length (rmin=300bp in our case) and total lengths of sequences 1.fa (L1) and 2.fa (L2).
 
 4. Calculation of the GO and SEED terms along the matches. 
 To output the sequence of the matches, we run mummer with the "-s" option: mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq. KSENIA
