@@ -16,15 +16,14 @@ To calculate the prefactor from the match length frequency table in ResHist.mumm
 4. Calculation of the GO and SEED terms along the matches. 
 To output the sequence of the matches, we run mummer with the "-s" option: mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq.
 
-To make the connections of SEED to NR accession numbers, from the database files mentioned in the paper we used
+To make the connections of SEED to NR accession numbers, from the database files mentioned in the paper we used the
 MakeSEEDConnections.py script.
 
 To predict proteins from exact matches we used the following command:
 prodigal -i Res.mumm_w_seq.fasta -a predicted_prot.faa -o orf.gff -p meta -q -f gff
 
 To get SEED annotations we used:
-diamond blastp -d nr.dmnd -q predicted_prot.faa -o alignment.txt -p 10 —quiet -k 0
-ConnectNRToSEED.py
+diamond blastp -d nr.dmnd -q predicted_prot.faa -o alignment.txt -p 10 —quiet -k 0 ConnectNRToSEED.py
 
 GO terms search has been done using:
 ./interproscan.sh -i predicted_prot.faa -f tsv -dp --goterms -pa -appl Pfam -appl TIGRFAM --cpu 20
