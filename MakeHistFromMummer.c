@@ -1,3 +1,5 @@
+//This program takes as an input mummer file Res.mumm and generates frequency table ResHist.mumm
+
 int main MakeHistFromMumm()
 {
 	string line,foo;
@@ -17,7 +19,7 @@ int main MakeHistFromMumm()
 			MLD[L]++;
 		}
 	}
-
+	//output result
 	for (map<unsigned ,unsigned long long int>::iterator  itMLD=MLD.begin();itMLD!=MLD.end();itMLD++)
 	{
 		OutFile<<(*itMLD).first<<" "<<(*itMLD).second<<endl;
