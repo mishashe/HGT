@@ -66,5 +66,7 @@ Using the text-mining engine of Google we annotated some of the genera as predom
 
 #### 10. Blasting across databases.
 To obtain the blast hits to 12 specific databases (Acquired  antibiotic resistant genes (ResFinder database), Antibacterial Biocide and Metal Resistance Genes Database (BacMet database), Integrative and conjugative elements (ICEberg database), Virulence factors(VFDB database), Essential genes (DEG database), Toxin-Antitoxin systems (TADB database), Peptidases (MEROPS database), Bacterial Exotoxins for Human (DBETH database), Transmembrane proteins (PDBTM database), Restriction Enzymes (REBASE database), Bacterial small regulatory RNA genes (BSRD database), the Transporter Classification Database (TCDB) and Enzyme classification database (Brenda) we use the command 
-`blastx -query seq.fa -max_hsps 1 -db database.fsa > seq.blast.temp -evalue 1e-50 -outfmt "6 sseqid,sseqid"`
+```bash
+blastx -query seq.fa -max_hsps 1 -db database.fsa > seq.blast.temp -evalue 1e-50 -outfmt "6 sseqid,sseqid"`
+```
 where `seq.fa` is the input file containting the matches and `database.fsa` is the database file. The output hits are stored in `seq.blast.temp` file.
