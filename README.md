@@ -35,8 +35,10 @@ Bacteria evolutionary tree with time information on the genus level we downloade
 
 
 #### 6. Calculation of the GO and SEED terms along the matches. 
-To output the sequence of the matches, we run mummer with the `-s` option: `mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq`. 
-
+To output the sequence of the matches, we run mummer with the `-s` option: 
+```bash
+mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq`. 
+```
 To make the connections of SEED to NR accession numbers from the database files mentioned in the paper we used the
 `MakeSEEDConnections.py` script.
 
