@@ -5,6 +5,10 @@ Here we describe the analysis of exact matches between genomic sequences publish
 ```bash
 https://www.ncbi.nlm.nih.gov/nuccore?term=srcdb_refseq%5BPROP%5D%20AND%20%28bacteria%5Bfilter%5D%20AND%20biomol_genomic%5BPROP%5D%20AND%20refseq%5Bfilter%5D%20AND%20%28%22100000%22%5BSLEN%5D%20%3A%20%221000000000000000%22%5BSLEN%5D%29%29&cmd=DetailsSearch
 ```  
+or, alternatively the search parameters are
+```bash
+srcdb_refseq[PROP] AND (bacteria[filter] AND biomol_genomic[PROP] AND refseq[filter] AND ("100000"[SLEN] : "1000000000000000"[SLEN]))
+```  
 
 #### 1. Identificaton of all exact matches between two genomic sequences.
 To find all matches longer than 300bp between sequences in files `1.fa` and `2.fa` and save it in the file `Res.mumm` we use the following command: 
