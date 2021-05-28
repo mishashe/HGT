@@ -9,7 +9,7 @@ or, alternatively the search parameters in the NCBI site are
 ```bash
 srcdb_refseq[PROP] AND (bacteria[filter] AND biomol_genomic[PROP] AND refseq[filter] AND ("100000"[SLEN] : "1000000000000000"[SLEN]))
 ```  
-In the above case all contigs longer than 100,000bp will be downloaded.  
+In the above case all contigs longer than 100,000bp will be downloaded. We save the results to file `RefSeq.fa`. 
 
 #### 2. Identificaton of all exact matches between two genomic sequences.
 To find all matches longer than 300bp between sequences in files `1.fa` and `2.fa` and save it in the file `Res.mumm` we use the following command: 
