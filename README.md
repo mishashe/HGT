@@ -28,6 +28,11 @@ The output file has two columns: column 1 gives the length of the match, column 
 #### 4. Calculation the prefactor of the resulting power law. 
 To calculate the prefactor from the match-length frequency table in `ResHist.mumm` we use the Matlab script that can be found in file `CalculatePrefactor.m`. It takes as an input the file with the frequency table, the minimal match length (rmin=300bp in our case), and total lengths of sequences `1.fa` (L1) and `2.fa` (L2).
 
+#### 5. Bacteria evolution tree with time on the genus level.
+We download the bacteria evolutionary tree on the genus level from the `http://www.timetree.org/` site. It results in the `Newick` file `Bacteria_genus.nwk`.
+
+
+
 #### 5. Calculation of the GO and SEED terms along the matches. 
 To output the sequence of the matches, we run mummer with the `-s` option: `mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq`. 
 
