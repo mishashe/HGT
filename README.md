@@ -9,7 +9,7 @@ or, alternatively the search parameters in the NCBI site are
 ```bash
 srcdb_refseq[PROP] AND (bacteria[filter] AND biomol_genomic[PROP] AND refseq[filter] AND ("100000"[SLEN] : "1000000000000000"[SLEN]))
 ```  
-In the above case all contigs longer than 100,000bp will be downloaded. We save the results to file `RefSeq.fa`. 
+In the above case all contigs longer than 100,000bp will be downloaded. We save the results to a file named `RefSeq.fa`. 
 
 #### 2. Identificaton of all exact matches between two genomic sequences.
 To find all matches longer than 300bp between sequences in files `1.fa` and `2.fa` and save it in the file `Res.mumm` we use the following command: 
@@ -29,8 +29,8 @@ The output file has two columns: column 1 gives the length of the match, column 
 To calculate the prefactor from the match-length frequency table in `ResHist.mumm` we use the Matlab script that can be found in file `CalculatePrefactor.m`. It takes as an input the file with the frequency table, the minimal match length (rmin=300bp in our case), and total lengths of sequences `1.fa` (L1) and `2.fa` (L2).
 
 #### 5. Taxonomy database.
-For the taxonomy we use NCBI database downloaded from `ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/`.
-Bacteria evolutionary tree with time information on the genus level we downloaded from the `http://www.timetree.org/` site. It results in the `Newick` file `Bacteria_genus.nwk`. 
+For the taxonomy we use the NCBI database downloaded from `ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/`.
+Bacteria evolutionary tree with divergence time information on the genus level was downloaded from the `http://www.timetree.org/` site. It results in the `Newick` file `Bacteria_genus.nwk`. 
 
 
 
