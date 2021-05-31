@@ -16,10 +16,8 @@ To find all matches longer than 300bp between sequences in files `1.fa` and `2.f
 ```bash
 mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm.
 ```  
-To obtain exact matches from all-vs-all comparisons we run mummer on the downloaded RefSeq file (`RefSeq.fa`) and itself:
-```bash
-mummer -maxmatch -n -b -l 300 RefSeq.fa RefSeq.fa > Res.mumm.
-```  
+To obtain exact matches from all-vs-all comparisons we run the above command for all pairwise comparisons between any two species of the RefSeq.fa database. This step can be efficiently parallelized.
+
 
 #### 3. Making the frequency table of matches lengths. 
 To do so we use the C program named `MakeHistFromMummer.c`. It takes as an input `Res.mumm` and generates the frequency table, which we output to the file named `ResHist.mumm`.
