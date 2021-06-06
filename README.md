@@ -27,7 +27,7 @@ The output file has two columns: column 1 gives the length of the match, column 
 To calculate the prefactor from the match-length frequency table in `ResHist.mumm` we use the Matlab script that can be found in file `CalculatePrefactor.m`. It takes as an input the file with the frequency table, the minimal match length (rmin=300bp in our case), and total lengths of sequences `1.fa` (L1) and `2.fa` (L2).
 
 #### 5. Taxonomy database.
-For the taxonomy we use the NCBI database downloaded from `ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/`.
+For the taxonomy we use the NCBI database downloaded from `ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/`. Script `MakeTaxonomy.R` takes the NCBI file `rankedlineage.dmp` as an input and outputs taxonomy table with 7 columns: species, genus, family, order, class, phylum and kingdom.
 Bacteria evolutionary tree with divergence time information on the genus level was downloaded from the `http://www.timetree.org/` site. It results in the `Newick` file `Bacteria_genus.nwk`. 
 
 
