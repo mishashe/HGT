@@ -68,3 +68,7 @@ To obtain the blast hits to 12 specific databases (Acquired  antibiotic resistan
 blastx -query seq.fa -max_hsps 1 -db database.fsa -evalue 1e-50 -outfmt "6 sseqid,sseqid" > seq.blast.temp
 ```
 where `seq.fa` is the input file containting the matches and `database.fsa` is the database file. The output hits are stored in `seq.blast.temp` file.
+
+#### 11. Environment, Gram and GC content annotation.
+Using the text mining engine of Google we annotated some of the genera as predominately Marine, Gut and Soil. 
+Using the same approach we identified Gram-positive, Gram-negative, GC-rich and GC-poor Genera. Screenshot GoogleSoilBacteria.png demonstrates an example for soil bacteria. Resulting lists of genera are in the GeneraSets.xlsx in the Supplementary data of the article.
