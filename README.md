@@ -14,7 +14,7 @@ In the above case all contigs longer than 100,000bp will be downloaded. We save 
 #### 2. Identificaton of all exact matches between two genomic sequences.
 To find all matches longer than 300bp between sequences in files `1.fa` and `2.fa` and save it in the file `Res.mumm` we use the following command: 
 ```bash
-mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm.
+mummer -maxmatch -n -b -l 300 1.fa 2.fa > Res.mumm
 ```  
 To obtain exact matches from all-vs-all comparisons we run the above command for all pairwise comparisons between any two species of the RefSeq.fa database. This step can be efficiently parallelized depending on the available computer resources.
 
@@ -35,7 +35,7 @@ Bacteria evolutionary tree with divergence time information on the genus level w
 #### 6. Calculation of the GO and SEED terms along the matches. 
 To output the sequence of the matches, we run mummer with the `-s` option: 
 ```bash
-mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq`. 
+mummer -maxmatch -n -s -b -l 300 1.fa 2.fa > Res.mumm_w_seq 
 ```
 To make the connections of SEED to NR accession numbers from the database files mentioned in the paper we used the
 `MakeSEEDConnections.py` script.
@@ -50,7 +50,7 @@ diamond blastp -d nr.dmnd -q predicted_prot.faa -o alignment.txt -p 10 —quiet 
 ```
 GO terms search has been done using:
 ```bash
-./interproscan.sh -i predicted_prot.faa -f tsv -dp --goterms -pa -appl Pfam -appl TIGRFAM --cpu 20
+interproscan.sh -i predicted_prot.faa -f tsv -dp --goterms -pa -appl Pfam -appl TIGRFAM --cpu 20
 ```
   
 #### 7. Calculation of the enrichment of GO and SEED terms. 
@@ -65,6 +65,6 @@ Using the text-mining engine of Google we annotated some of the genera as predom
 #### 10. Blasting across databases.
 To obtain the blast hits to 12 specific databases (Acquired  antibiotic resistant genes (ResFinder database), Antibacterial Biocide and Metal Resistance Genes Database (BacMet database), Integrative and conjugative elements (ICEberg database), Virulence factors(VFDB database), Essential genes (DEG database), Toxin-Antitoxin systems (TADB database), Peptidases (MEROPS database), Bacterial Exotoxins for Human (DBETH database), Transmembrane proteins (PDBTM database), Restriction Enzymes (REBASE database), Bacterial small regulatory RNA genes (BSRD database), the Transporter Classification Database (TCDB) and Enzyme classification database (Brenda) we use the command 
 ```bash
-blastx -query seq.fa -max_hsps 1 -db database.fsa > seq.blast.temp -evalue 1e-50 -outfmt "6 sseqid,sseqid"`
+blastx -query seq.fa -max_hsps 1 -db database.fsa -evalue 1e-50 -outfmt "6 sseqid,sseqid" > seq.blast.temp
 ```
 where `seq.fa` is the input file containting the matches and `database.fsa` is the database file. The output hits are stored in `seq.blast.temp` file.
